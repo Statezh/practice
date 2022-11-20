@@ -48,10 +48,10 @@ class EditViewController: UIViewController {
     
     @IBAction func btnZoom(_ sender: UIButton) {
         if isZoom {
-            isZoom = false
+            isZoom = true
             btnResize.setTitle("축소", for: UIControl.State())
         } else {
-            isZoom = true
+            isZoom = false
             btnResize.setTitle("확대", for: UIControl.State())
         }
     }

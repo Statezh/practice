@@ -59,14 +59,16 @@ class ViewController: UIViewController, EditDelegate{
         var newWidth:CGFloat, newHeight:CGFloat
         
         if isZoom {
-            _isZoom = false
+            self._isZoom = false
             newWidth = imgView.frame.width*scale
             newHeight = imgView.frame.height*scale
             imgView.frame.size = CGSize(width: newWidth, height: newHeight)
         } else{
-            
+            self._isZoom = true
+            newWidth = imgView.frame.width/scale
+            newHeight = imgView.frame.height/scale
+            imgView.frame.size = CGSize(width: newWidth, height: newHeight)
         }
-        
     }
     
 }
